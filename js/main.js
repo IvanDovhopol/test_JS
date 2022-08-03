@@ -1,391 +1,261 @@
-// const yearOfBirth = 2002;
-// console.log(yearOfBirth);
+// Массивы
+// Операторы break и continue
 
-// const yearToday = 20;
-// console.log(yearToday);
+// const clients = ['Mango', 'Kiwi', 'Lemon'];
+// const clientNameToFind = 'Lemon';
+// let message = 'Клиента с таким именем нету в базе данных!';
 
-// const dateNow = 22.07;
-// console.log(dateNow);
+// for (const client of clients) {
+//   if (client === clientNameToFind) {
+//     message = 'Клиент с таким именем есть в базе данных!';
+//     break;
+//   }
+// }
 
-// const price = 10;
-// console.log(price);
-
-// let age;
-// console.log(age);
-
-// age = 14;
-// console.log(age);
-
-// age = 15;
-// console.log(age);
-
-// age = 18;
-// console.log(age);
-
-// // КОНСТАНТЫ
-// const COLOR_TEAL = '#009688';
-
-// // ПРИМИТИВНЫЕ ТИПЫ
-// // Number
-// const points = 19.99;
-// console.log(points);
-
-// //String
-// const username = 'Ivan';
-// console.log(username);
-
-// const description = 'Wellcome!';
-// console.log(description);
-
-// //Boolean
-// const isModalOpen = false;
-// const theTableClear = false;
-// const isLampOn = true;
-// console.log(isModalOpen, isLampOn);
-
-// // null
-// let selectedProduct = null;
-// console.log(selectedProduct);
-
-// // undefined
-// let surname;
-// console.log(typeof surname);
-
-// // ВЗАЕМОДЕЙСТВИЕ С ПОЛЬЗОВАТЕЛЕМ
-// // Вывод данных
-// const message = 'hello world!';
 // console.log(message);
 
-// const fullname = 'Ivan Dovhopol';
-// console.log('name:', fullname);
-
-// // const prewiew = 'Добро пожаловать на страницу!';
-// // alert(prewiew);
-
-// // Получение данных
-// // const isPerson = confirm('Подтвердите действие на странице');
-// // console.log(isPerson);
-
-// // const userLogin = prompt('Напишите ваше имя');
-// // console.log(userLogin);
-
-// // Математические операторы
-// const x = 200;
-// const y = 100;
-// console.log(x / y);
-
-// let value = 50;
-// value += 25;
-// console.log(value);
-
-// const a = 50;
-// const b = 25;
-// const c = 10;
-// console.log('a > b:', a > b);
-// console.log('c == a:', c == a);
-// console.log('a !== b:', a !== b);
-// console.log(a === 'a');
-
-// // Числа
-// const valueA = 75;
-// console.log(Number(valueA));
-// console.log(typeof Number(valueA));
-
-// const valueB = 'Lorem ipsum';
-// console.log(Number(valueB));
-// console.log(typeof Number(valueB));
-
-// // Методы Number.parseInt() и Number.parseFloat()
-// // парсит из строки целое число
-// console.log(Number.parseInt('1222asdgsdg234sdg'));
-// console.log(Number.parseInt('123.123sfdhgdfhg'));
-// console.log(Number.parseInt('wasdfg'));
-
-// // парсит из строки дробное число
-// console.log(Number.parseFloat('456sfdhgsdr234ghg'));
-// console.log(Number.parseFloat('123.123 dfhgfdsh456'));
-// console.log(Number.parseFloat('qweqweq'));
-
-// // Проверка на число
-// const validNumber = Number('51');
-// console.log(Number.isNaN(validNumber));
-
-// const invalidNumber = Number('qweqweqwe');
-// console.log(Number.isNaN(invalidNumber));
-
-// // Сложение чисел с плавающей точкой
-// console.log(0.2 + 0);
-// console.log(0.7 + 0);
-
-// console.log('0.1 + 0.9 =', 0.1 + 0.9);
-// console.log('0.2 + 0.8 =', 0.2 + 0.8);
-// console.log('0.3 + 0.7 =', 0.3 + 0.7);
-// console.log('0.4 + 0.6 =', 0.4 + 0.6);
-// console.log('0.5 + 0.5 =', 0.5 + 0.5);
-// console.log('0.6 + 0.4 =', 0.6 + 0.4);
-// console.log('0.7 + 0.3 =', 0.7 + 0.3);
-// console.log('0.8 + 0.2 =', 0.8 + 0.2);
-// console.log('0.9 + 0.1 =', 0.9 + 0.1);
-
-// console.log(0.2 + 0.7);
-// console.log((0.2 + 0.7).toFixed(1));
-
-// // Класс Math
-// console.log(Math.floor(2.1));
-// console.log(Math.ceil(1.0000001));
-// console.log(Math.round(1.6));
-// console.log(Math.max(45, 324, 55, 101));
-// console.log(Math.min(34, 98, 21, 456));
-// console.log(Math.pow(5, 2));
-// console.log(Math.random() * 10);
-
-// // Конкатенация строк
-// const sms = 'Hello' + ' ' + 'world' + '!';
-// console.log(sms);
-
-// console.log(1 + 1 + '5');
-// console.log('5' + 1 + 1);
-// console.log(1 + '5' + 1);
-
-// // Шаблонные строки
-// const guestName = 'Ivan';
-// const roomNumber = 99;
-// const greeting = `Hello ${guestName}, your room number - ${roomNumber}!`;
-// console.log(greeting);
-
-// // Свойства и методы строк
-// const textA = 'Lorem ipsum dolor';
-// console.log(textA.length + 'Lorem ipsum dolor'.length);
-// console.log(textA.toLowerCase());
-// console.log(textA.toUpperCase());
-// console.log(textA.indexOf('ipsum'));
-// console.log(textA.includes('Lorem'));
-// console.log(textA.includes('lorem'));
-// console.log(textA.endsWith('dolor'));
-
-// // Методы replace() и replaceAll()
-// const cssStyleNames = 'hero.css, header.css, footer.css';
-// const scssStyleNames = cssStyleNames.replaceAll('css', 'scss');
-// console.log(scssStyleNames);
-
-// // Логические операторы
-// console.log(5 && 4);
-// console.log('Ivan' && '');
-
-// console.log(true || false);
-// console.log(1 || 2);
-
-// const isOnline = true;
-// console.log(!isOnline);
-// console.log(!'');
-
-// // Ветвление
-
-// // Инструкция if
-// let price = 'close';
-// const sub = 'Vip';
-
-// if (sub === 'Vip') {
-//   price = 'open';
-// }
-
-// console.log(price);
-
-// Инструкция if ... else
-// let access;
-// const sub = 'Pro';
-
-// // if (sub === 'Pro') {
-//   access = 'open';
-// } else {
-//   access = 'close';
-// }
-
-// console.log(access);
-
-// // Инструкция else ... if
-// let cost;
-// const sub = 'premium';
-
-// if (sub === 'free') {
-//   cost = 0;
-// } else if (sub === 'pro') {
-//   cost = 50;
-// } else if (sub === 'premium') {
-//   cost = 100;
-// } else {
-//   console.log('access close');
-// }
-
-// console.log(cost);
-
-// let apples;
-// const theWeight = 10;
-
-// if (theWeight === 2) {
-//   apples = 20;
-// } else if (theWeight === 5) {
-//   apples = 50;
-// } else if (theWeight === 9) {
-//   apples = 90;
-// } else if (theWeight === 10) {
-//   apples = 100;
-// } else {
-//   console.log('invalid weight');
-// }
-
-// console.log(apples);
-
-// let type;
-// const age = 18;
-
-// if (age >= 18) {
-//   type = 'access open';
-// } else {
-//   type = 'access close';
-// }
-
-// console.log(type);
-
-// const age = 14;
-// const type = age >= 18 ? 'mid' : 'jun';
-// console.log(type);
-
-// const num1 = 100;
-// const num2 = 150;
-// let numBig;
-
-// if (num1 > num2) {
-//   numBig = num1;
-// } else if (num2 > num1) {
-//   numBig = num2;
-// }
-
-// console.log(numBig);
-
-// const numBig = num1 > num2 ? num1 : num2;
-// console.log(numBig);
-
-// // Инструкция switch
-// let cost;
-// const sub = 'premium';
-
-// switch (sub) {
-//   case 'free':
-//     cost = 0;
-//     break;
-
-//   case 'pro':
-//     cost = 100;
-//     break;
-
-//   case 'premium':
-//     cost = 500;
-//     break;
-
-//   default:
-//     console.log('invalid cost');
-// }
-
-// console.log(cost);
-
-// Цикл while
-// let counter = 0;
-// while (counter < 5) {
-//   console.log('counter:', counter);
-//   counter += 1;
-// }
-
-// let clientCouter = 0;
-// const maxClients = 25;
-
-// while (clientCouter <= maxClients) {
-//   console.log(clientCouter);
-//   clientCouter += 1;
-// }
-
-// let userLogin = '';
-// let userPassword = '';
-
-// do {
-//   userLogin = prompt('Введите свой логин', '');
-//   userPassword = prompt('Пароль должен содержать не менее 4 символов', '');
-// } while (userLogin.length < 4);
-
-// console.log('Вы ввели логин:', userLogin);
-// console.log('Вы ввели пароль:', userPassword);
-
-// Цыклы
-// for (let i = 0; i <= 20; i += 5) {
-//   console.log(i);
-// }
-
-// const target = 3;
-// let sum = 0;
-
-// for (let i = 0; i <= target; i += 1) {
-//     sum += i;
-// }
-
-// console.log(sum);
-
-// const max = 10;
-
-// for (let i = 0; i < max; i += 1) {
-//     console.log(`${max} % ${i}`, max % i)
-// }
-
-// for (let i = 0; i <= 5; i += 1) {
-//   console.log(i);
-//   if (i === 3) {
-//     console.log('log up');
-//     break;
-//   }
-// }
-
-// console.log('log down');
-
-// const number = 10;
-
-// for (let i = 0; i < number; i += 1) {
-//   if (i % 2 === 0) {
+// const numbers = [1, 3, 5, 8, 11, 15, 25, 38, 49, 56, 93, 158, 201, 524, 999];
+// const limit = 9;
+
+// for (let i = 0; i < numbers.length; i += 1) {
+//   if (numbers[i] < limit) {
 //     continue;
 //   }
-
-//   console.log('Нечетное i: ', i); // 1, 3, 5, 7, 9
+//   console.log(`Числa больше чем ${limit}: ${numbers[i]}`);
 // }
 
-// function getShippingCost(country) {
-//   let message;
-//   // Change code below this line
-//   switch (country) {
-//     case 'China':
-//       console.log('Shipping to China will cost 100 credits');
-//       break;
+// Присвоение по ссылке и по значению
 
-//     case 'Chile':
-//       console.log('Shipping to Chile will cost 250 credits');
-//       break;
+// let a = ['Lemon'];
+// let b = a;
+// let c = b;
+// let i = c;
 
-//     case 'Australia':
-//       console.log('Shipping to Australia will cost 170 credits');
-//       break;
+// console.log('a =', a);
+// console.log('b =', b);
 
-//     case 'Jamaica':
-//       console.log('Shipping to Jamaica will cost 120 credits');
-//       break;
+// a.push('Mango');
+// console.log('a =', a);
+// console.log('b =', b);
 
-//     // case 'Germany':
-//     //   console.log('Sorry, there is no delivery to your country');
-//     //   break;
+// b.push('Kiwi');
+// console.log('a =', a);
+// console.log('b =', b);
 
-//     // case 'Sweden':
-//     //   console.log('Sorry, there is no delivery to your country');
-//     //   break;
+// c.push('Apple');
+// console.log('b =', b);
+// console.log('c =', c);
 
-//     default:
-//       console.log('Sorry, there is no delivery to your country');
+// i.push('Watermelon');
+// console.log('c =', c);
+// console.log('i =', i);
+
+//
+
+// Методы split() и join()
+// const guestName = 'Lemon';
+// console.log(guestName.split(''));
+
+// const message = 'Welcome to the home !';
+// console.log(message.split(' '));
+
+// const clients = ['Mango', 'Kiwi', 'Lemon'];
+// console.log(clients.join(' - '));
+
+// Метод includes() and indexOf()
+// const clients = ['Mango', 'Kiwi', 'Lemon'];
+// console.log(clients.indexOf('Lemon'));
+// console.log(clients.indexOf('Apple'));
+
+// const clients = ['Mango', 'Kiwi', 'Lemon'];
+// console.log(clients.includes('Mango'));
+// console.log(clients.includes('Watermelon'));
+
+// Проверка множественных условий с includes()
+// const fruitMix = ['Mango', 'Kiwi', 'Lemon', 'Apple'];
+// const fruit = 'Apple';
+// const hasFruit = fruitMix.includes(fruit);
+
+// if (hasFruit) {
+//   console.log(`${fruit} is includes`);
+// } else {
+//   console.log('Fruit is not includes');
+// }
+
+// Методы push() и pop()
+// const number = [];
+
+// number.push();
+// console.log(number);
+
+// number.push(1);
+// console.log(number);
+
+// number.push(2);
+// console.log(number);
+
+// number.push(3);
+// console.log(number);
+
+// number.push(4);
+// console.log(number);
+
+// //
+
+// console.log(number.pop());
+// console.log(number);
+
+// console.log(number.pop());
+// console.log(number);
+
+// console.log(number.pop());
+// console.log(number);
+
+// console.log(number.pop());
+// console.log(number);
+
+//Метод slice()
+
+// const clients = ['Mango', 'Kiwi', 'Lemon', 'Apple'];
+// console.log(clients.slice(1, 3));
+// console.log(clients.slice(1));
+// console.log(clients.slice(2));
+// console.log(clients.slice(3));
+
+// Метод splice() - delete
+
+// const clients = ['Mango', 'Kiwi', 'Lemon', 'Apple'];
+// const deleteMass = clients.splice(0, 2);
+// console.log(clients);
+// console.log(deleteMass);
+
+// Метод splice() - add
+
+// const clients = ['Mango', 'Kiwi', 'Lemon'];
+// clients.splice(3, 0, 'Apple');
+// clients.splice(4, 0, 'Watermelon');
+// console.log(clients);
+
+// rename
+
+// const clients = ['Mango', 'Kiwi', 'Lemon', 'Apple'];
+// clients.splice(0, 1, 'Cherry');
+// clients.splice(1, 1, 'Watermelon');
+// console.log(clients);
+
+// Метод concat()
+// const oldClients = ['Mango', 'Kiwi', 'Lemon'];
+// const newClients = ['Cherry', 'Watermelon', 'Apple'];
+
+// const allClientsOldFirst = oldClients.concat(newClients);
+// console.log(allClientsOldFirst);
+
+// const allClientsNewFirst = newClients.concat(oldClients);
+// console.log(allClientsNewFirst);
+
+// console.log(oldClients);
+// console.log(newClients);
+
+//
+
+// const clients = ['Mango', 'Kiwi', 'Lemon', 'Apple', 'Cherry', 'Watermelon'];
+// for (let i = 0; i < clients.length; i += 1) {
+//   clients[i] += `-${i}`;
+// }
+// console.table(clients);
+
+//
+
+// const cost = [32, 45, 867, 2, 6, 98, 21, 435, 79, 324, 534, 4, 6, 214, 464];
+// let total = Number();
+
+// for (let i = 0; i < cost.length; i += 1) {
+//   total += cost[i];
+//   console.log('+', cost[i]);
+// }
+
+// ||
+
+// for (const value of cost) {
+//   total += value;
+// }
+
+// console.log('Total:', total);
+
+// Ищем нужного клента в базе данных =>
+
+// const clients = ['Mango', 'Kiwi', 'Lemon', 'Apple', 'Cherry', 'Watermelon'];
+// const clientToFind = 'Kiwi';
+// let message = `Client ${clientToFind} is not find`;
+
+// var - 1
+
+// for (let i = 0; i < clients.length; i += 1) {
+//   const client = clients[i];
+
+//   if (client === clientToFind) {
+//     message = `Client ${clientToFind} is find`;
+//     break;
 //   }
-//   // Change code above this line
-//   return message;
 // }
+
+// var - 2
+
+// for (const client of clients) {
+//   if (client === clientToFind) {
+//     message = `Client ${clientToFind} is find`;
+//     break;
+//   }
+// }
+
+// var - 3
+
+// message = clients.includes(clientToFind)
+//   ? `Client ${clientToFind} is find`
+//   : message;
+
+// console.log(message);
+
+// Найти самое маленькое число
+
+// const numbers = [235, 36, 123, 645, 22, 823, 32, 129, 467, 33, 687, 31];
+// let theLittleNumber = numbers[0];
+
+// for (const number of numbers) {
+//   if (number < theLittleNumber) {
+//     theLittleNumber = number;
+//   }
+// }
+
+// console.log(theLittleNumber);
+
+// Найти самое большое число
+
+// const numbers = [235, 36, 123, 645, 22, 823, 32, 129, 467, 33, 687, 31];
+// let theBigNumber = 0;
+
+// for (const number of numbers) {
+//   if (number > theBigNumber) {
+//     theBigNumber = number;
+//   }
+// }
+
+// console.log(theBigNumber);
+
+//
+
+const numbers = [235, 36, 123, 645, 22, 823, 32, 129, 467, 33, 687, 31];
+let total = Number();
+
+// for (const number of numbers) {
+//   console.log('-_-', number);
+//   total += number;
+// }
+
+// ||
+
+for (let i = 0; i < numbers.length; i += 1) {
+  total += numbers[i];
+}
+
+console.log('total:', total);
