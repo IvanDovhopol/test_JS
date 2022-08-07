@@ -244,8 +244,8 @@
 
 //
 
-const numbers = [235, 36, 123, 645, 22, 823, 32, 129, 467, 33, 687, 31];
-let total = Number();
+// const numbers = [235, 36, 123, 645, 22, 823, 32, 129, 467, 33, 687, 31];
+// let total = Number();
 
 // for (const number of numbers) {
 //   console.log('-_-', number);
@@ -254,8 +254,238 @@ let total = Number();
 
 // ||
 
-for (let i = 0; i < numbers.length; i += 1) {
-  total += numbers[i];
-}
+// for (let i = 0; i < numbers.length; i += 1) {
+//   total += numbers[i];
+// }
 
-console.log('total:', total);
+// console.log('total:', total);
+
+//
+
+// const numbers = [235, 36, 123, 645, 22, 823, 32, 129, 467, 33, 687, 31];
+// let total = 0;
+
+// for (const number of numbers) {
+//   total += number;
+// }
+
+//
+
+// for (let i = 0; i < numbers.length; i += 1) {
+//   total += numbers[i];
+// }
+
+// console.log('total:', total);
+
+//
+
+// const mixNumbers = '335-36-123';
+// const numbers = mixNumbers.split('-');
+// const result = Number(numbers[0]) + Number(numbers[1]) + Number(numbers[2]);
+// console.log('result:', result);
+
+//
+
+// const numbers =
+//   '235/.,/.,/.,/.,/.,/.,36/.,/.,/.,/.,/.,/.,123/.,/.,/.,/.,/.,/.,645/.,/.,/.,/.,/.,/.,22/.,/.,/.,/.,/.,/.,823/.,/.,/.,/.,/.,/.,32/.,/.,/.,/.,/.,/.,129/.,/.,/.,/.,/.,/.,467/.,/.,/.,/.,/.,/.,33/.,/.,/.,/.,/.,/.,687/.,/.,/.,/.,/.,/.,31';
+// const numbersArr = numbers.split('/.,/.,/.,/.,/.,/.,');
+// console.log(numbersArr);
+
+//
+
+// const string = 'Hello 1234567890 0987654321';
+
+// const strToArr = string.split('');
+// const reverseStrToArr = strToArr.reverse();
+// const reverseString = reverseStrToArr.join('');
+
+// ||
+
+// const reverseString = string.split('').reverse().join('');
+
+// console.log(reverseString);
+
+// Избавляемся от повторений
+
+// const numbers = [
+//   235, 36, 123, 645, 22, 823, 32, 129, 467, 33, 687, 31, 123, 22, 129, 687, 22,
+//   235, 32, 687, 129, 687, 33, 823, 22, 645, 22,
+// ];
+// const result = [];
+
+// for (let i = 0; i < numbers.length; i += 1) {
+//   const checkIndex = numbers.indexOf(numbers[i]);
+//   if (i === checkIndex) {
+//     result.push(numbers[i]);
+//   }
+// }
+
+// console.log(numbers);
+// console.log(result);
+
+//
+
+// const oldNumbers = [
+//   235, 36, 123, 645, 22, 823, 32, 129, 467, 33, 687, 31, 123, 22, 129, 687, 22,
+//   235, 32, 687, 129, 687, 33, 823, 22, 645, 22,
+// ];
+// const newNumbers = [];
+
+// for (let i = 0; i < oldNumbers.length; i += 1) {
+//   const checkIndex = oldNumbers.indexOf(oldNumbers[i]);
+//   if (i === checkIndex) {
+//     newNumbers.push(oldNumbers[i]);
+//   }
+// }
+
+// console.log('Номера до сортировки:', oldNumbers);
+// console.log('Номера после сортировки:', newNumbers);
+
+//
+
+// Функции =>
+
+// простая формула калькуляции
+
+// function calculation(x, y, z) {
+//   console.log(`Рузультат выражения: ${(x + y) * z}`);
+
+// return (x + y) * z;
+
+// console.log('non');
+// }
+
+// console.log('pre');
+// calculation(100, 53, 4);
+// console.log('next');
+
+//
+
+// function multiply() {
+//   let total = 1;
+
+//   for (const argument of arguments) {
+//     total *= argument;
+//   }
+
+//   return total;
+// }
+
+// console.log('result:', multiply(100, 4));
+// console.log('result:', multiply(200, 4));
+// console.log('result:', multiply(400, 4));
+
+// Снятие денег в банкомате
+
+// function withdraw(amount, balance) {
+//   if (amount <= 0) {
+//     console.log('Введите сумму больше 0');
+//   } else if (amount > balance) {
+//     console.log('Недостаточно средств на балансе для совершения операции');
+//   } else {
+//     console.log('Операция выполнена успешно');
+//   }
+// }
+
+// withdraw(501, 500);
+
+// ||
+
+// function withdraw(amount, balance) {
+//   if (amount <= 0) {
+//     console.log('Введите сумму больше 0');
+//     return;
+//   }
+
+//   if (amount > balance) {
+//     console.log('Недостаточно средств на балансе для совершения операции');
+//     return;
+//   }
+
+//   console.log('Операция выполнена успешно');
+// }
+
+// withdraw(1242, 500);
+
+//
+
+// function fnA() {
+//   console.log('Лог внуртри функции fnA до вызова fnB ---1');
+//   fnB();
+//   console.log('Лог внуртри функции fnA после вызова fnB ---2');
+// }
+
+// function fnB() {
+//   console.log('Лог внутри функции fnB ---3');
+// }
+
+// console.log('Лог перед вызовом fnA ---4');
+// fnA();
+// console.log('Лог после вызова fnA ---5');
+
+//
+
+// const clients = ['Mango', 'Kiwi', 'Lemon', 'Apple', 'Cherry', 'Watermelon'];
+
+// const clientsToFind = function (allClients, clientsToFind) {
+//   return allClients.includes(clientsToFind)
+//     ? `Пользователь ${clientsToFind} найден`
+//     : `Пользователь ${clientsToFind} не найден`;
+// };
+
+// console.log(clientsToFind(clients, 'Lemon'));
+// console.log(clientsToFind(clients, 'lhjkl3'));
+// console.log(clientsToFind(clients, 'Cherry'));
+// console.log(clientsToFind(clients, 'lmwb6d'));
+// console.log(clientsToFind(clients, 'Kiwi'));
+
+// ||
+
+// const clients = ['Mango', 'Kiwi', 'Lemon', 'Apple', 'Cherry', 'Watermelon'];
+
+// const clientsToFind = function (allClients, clientsToFind) {
+//   for (const client of allClients) {
+//     if (client === clientsToFind) {
+//       return `Client ${clientsToFind} is find`;
+//     }
+//   }
+//   return `Client ${clientsToFind} is not find`;
+// };
+
+// console.log(clientsToFind(clients, 'Lemon'));
+// console.log(clientsToFind(clients, 'lhjkl3'));
+// console.log(clientsToFind(clients, 'Cherry'));
+// console.log(clientsToFind(clients, 'lkm2'));
+// console.log(clientsToFind(clients, 'lkm2333s'));
+// console.log(clientsToFind(clients, 'Kiwi'));
+
+//
+// function checkStorage(available, ordered) {
+//   // Change code below this line
+
+//   if (ordered === 0) {
+//     return 'Your order is empty!';
+//   }
+
+//   if (ordered > available) {
+//     return 'Your order is too large, not enough goods in stock!';
+//   }
+
+//   return 'The order is accepted, our manager will contact you';
+
+//   // Change code above this line
+// }
+
+//
+
+// const fruits = ['apple', 'plum', 'pear', 'orange'];
+
+// // Change code below this line
+
+// const firstElement = ['apple'];
+// const secondElement = ['plum'];
+// const lastElement = ['orange'];
+
+// console.log(firstElement);
+// console.log(secondElement);
+// console.log(lastElement);
