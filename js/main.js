@@ -489,3 +489,21 @@
 // console.log(firstElement);
 // console.log(secondElement);
 // console.log(lastElement);
+
+// const planets = ['Earth', 'Mars', 'Venus'];
+// console.log(planets);
+
+// const fruits = ['apple', 'peach', 'pear', 'banana'];
+
+// // Change code below this line
+// const lastElementIndex = fruits.length - 1;
+// const lastElement = fruits[-1];
+
+// console.log(lastElementIndex);
+// console.log(lastElement);
+
+// const planets = ['Earth', 'Mars', 'Venus'];
+
+// for (let i = 0; i < planets.length; i += 1) {
+//   console.log(planets[i]);
+// }
