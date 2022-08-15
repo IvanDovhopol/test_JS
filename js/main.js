@@ -507,3 +507,588 @@
 // for (let i = 0; i < planets.length; i += 1) {
 //   console.log(planets[i]);
 // }
+
+//
+
+// Объекты =>
+
+// const user = {
+//   name: 'Jacques Gluke',
+//   tag: 'jgluke',
+//   location: {
+//     country: 'Jamaica',
+//     city: 'Ocho Rios',
+//   },
+//   stats: {
+//     followers: 5603,
+//     views: 4827,
+//     likes: 1308,
+//   },
+// };
+
+// console.log(user);
+
+// //
+
+// const client = {
+//   name: 'Ivan',
+//   surname: 'Dovhopol',
+//   location: {
+//     country: 'Ukraine',
+//     city: 'Kyiv',
+//   },
+//   info: {
+//     age: 20,
+//     growth: 183.5,
+//     hobbies: ['swiming', 'music', 'sci-fi'],
+//   },
+// };
+
+// console.log(client);
+
+// const clientSurname = client.surname;
+// console.log('Surname:', clientSurname);
+
+// const clientAge = client.info.age;
+// console.log('Age:', clientAge);
+
+// const clientLocationCountry = client.location.country;
+// console.log('Country:', clientLocationCountry);
+
+// console.log('<------------Or----------->');
+
+// console.log('Surname:', client['surname']);
+
+// console.log('Age:', client.info['age']);
+
+// console.log('Country:', client.location['country']);
+
+//
+
+// client.location.country = 'qwe';
+// console.log('Country:', client.location.country);
+
+// client.info.hobbies.push('travel', 'qwe', 'sdkhjgkjsdhg');
+// console.log(client.info.hobbies);
+
+//
+
+// client.info.language = ['en', 'ua', 'ru'];
+// console.log(client);
+
+// Вычисляемые свойства
+
+// const name = 'name';
+// const surname = 'surname';
+// const age = 'age';
+
+// const client = {
+//   [name]: 'Ivan',
+//   [surname]: 'Dovhopol',
+//   [age]: 20,
+// };
+
+// console.log(client.name);
+// console.log(client.surname);
+// console.log(client.age);
+
+// Методы объекта
+
+// const fruitsShop = {
+//   fruits: ['Kiwi', 'Mango', 'Lemon'],
+//   getFruits() {
+//     console.log('Этот метод возвращает все фрукты - свойство fruits');
+//   },
+//   addFruits() {
+//     console.log('Этот метод добавляет все фрукты в свойство fruits');
+//   },
+// };
+
+// fruitsShop.getFruits('Lemon');
+// fruitsShop.addFruits('Apple');
+
+// console.log(fruitsShop);
+
+// Доступ к свойствам объекта в методах
+
+// const fruitsShop = {
+//   fruits: ['Kiwi', 'Mango', 'Lemon'],
+//   fruitExpirationDate: '1 month',
+//   getFruit() {
+//     console.log(this);
+//   },
+// };
+
+// fruitsShop.getFruit();
+
+//
+
+// const fruitsShop = {
+//   fruits: ['Kiwi', 'Mango', 'Lemon'],
+//   getFruits() {
+//     return this.fruits;
+//   },
+//   addFruits(fruitsName) {
+//     this.fruits.push(fruitsName);
+//   },
+//   removeFruits(fruitsName) {
+//     const fruitsIndex = this.fruits.indexOf(fruitsName);
+//     this.fruits.splice(fruitsIndex, 1);
+//   },
+// };
+
+// console.log('Фруктов вначале:', fruitsShop.getFruits());
+
+// fruitsShop.addFruits('Apples');
+// fruitsShop.addFruits('Watermelon');
+// console.log('После завоза:', fruitsShop.getFruits());
+
+// fruitsShop.removeFruits('Kiwi');
+// fruitsShop.removeFruits('Lemon');
+// console.log('Остаток после удаления:', fruitsShop.getFruits());
+
+//
+
+// const fruitsShop = {
+//   fruits: ['Banana', 'Lemon', 'Watermelon'],
+//   getFruits() {
+//     return this.fruits;
+//   },
+
+//   addFruits(fruitsName) {
+//     this.fruits.push(fruitsName);
+//   },
+
+//   removeFruits(fruitsName) {
+//     const fruitIndex = this.fruits.indexOf(fruitsName);
+//     this.fruits.splice(fruitIndex, 1);
+//   },
+// };
+
+// console.log(fruitsShop.getFruits());
+
+// fruitsShop.addFruits('Kiwi');
+// fruitsShop.addFruits('Apples');
+// console.log(fruitsShop.getFruits());
+
+// fruitsShop.removeFruits('Banana');
+// console.log(fruitsShop.getFruits());
+
+//
+
+// const fruitsShop = {
+//   fruits: ['Watermelon' , 'Kiwi', 'Apples'],
+
+//   getFruits() {
+//     return this.fruits;
+//   },
+
+//   addFruits(fruitsName) {
+//     this.fruits.push(fruitsName);
+//   },
+
+//   removeFruits(fruitsName) {
+//     const fruitsIndex = this.fruits.indexOf(fruitsName);
+//     this.fruits.splice(fruitsIndex, 1);
+//   },
+// };
+
+// console.log(fruitsShop.getFruits());
+
+// fruitsShop.addFruits('Bananas');
+// fruitsShop.addFruits('Lemons');
+// console.log(fruitsShop.getFruits());
+
+// fruitsShop.removeFruits('Kiwi');
+// fruitsShop.removeFruits('Apples');
+// console.log(fruitsShop.getFruits());
+
+//
+
+// const watermelon = {
+//   theWeight: '2kg',
+//   quantity: 1,
+//   price: '2$',
+//   areAvailable: true,
+// };
+
+// for (const key in watermelon) {
+//   console.log(`watermelon ${key}:`, watermelon[key]);
+// }
+
+// Метод hasOwnProperty()
+
+// const fruit = {
+//   theWeight: '1kg',
+// };
+
+// const apple = Object.create(fruit);
+// apple.name = 'api';
+
+// console.log(apple);
+// console.log('apple name:', apple.name);
+// console.log('the weight apple:', apple.theWeight);
+
+// console.log(apple.hasOwnProperty('name'));
+// console.log(apple.hasOwnProperty('theWeight'));
+
+//
+
+// const watermelon = {
+//   theWeight: '2kg',
+//   quantity: 1,
+//   price: '2$',
+//   areAvailable: true,
+// };
+
+// for (const key in watermelon) {
+//   if (watermelon.hasOwnProperty([key])) {
+//     console.log(`watermelon ${key}:`, watermelon[key]);
+//   }
+// }
+
+// Метод Object.values()
+
+// const watermelon = {
+//   theWeight: '2kg',
+//   quantity: 1,
+//   price: '2$',
+//   areAvailable: true,
+// };
+
+// const keys = Object.keys(watermelon);
+// const values = Object.values(watermelon);
+
+// console.log(keys, values);
+
+//
+
+// const fruits = {
+//   mango: 33,
+//   lemons: 67,
+//   watermelons: 6,
+//   kiwi: 39,
+//   apples: 94,
+// };
+
+// const values = Object.values(fruits);
+// let total = 0;
+
+// for (const value of values) {
+//   total += value;
+// }
+
+// console.log('total quantity:', total);
+
+// Метод Object.entries()
+
+// const fruits = {
+//   mango: 33,
+//   lemons: 67,
+//   watermelons: 6,
+//   kiwi: 39,
+//   apples: 94,
+// };
+
+// const entries = Object.entries(fruits);
+// console.table(entries);
+
+// Массив обьектов
+
+// const watermelons = [
+//   {
+//     theWeight: '2kg',
+//     quantity: 1,
+//     price: '2$',
+//     areAvailable: true,
+//   },
+//   {
+//     theWeight: '3kg',
+//     quantity: 2,
+//     price: '5$',
+//     areAvailable: false,
+//   },
+//   {
+//     theWeight: '4kg',
+//     quantity: 3,
+//     price: '7$',
+//     areAvailable: true,
+//   },
+// ];
+
+// for (const watermelon of watermelons) {
+//   watermelon.theWeight;
+//   watermelon.quantity;
+//   watermelon.price;
+//   watermelon.areAvailable;
+// }
+
+//
+
+// const watermelons = [
+//   {
+//     theWeight: '2kg',
+//     quantity: 1,
+//     price: '2$',
+//     areAvailable: true,
+//   },
+//   {
+//     theWeight: '3kg',
+//     quantity: 2,
+//     price: '5$',
+//     areAvailable: false,
+//   },
+//   {
+//     theWeight: '4kg',
+//     quantity: 3,
+//     price: '7$',
+//     areAvailable: true,
+//   },
+// ];
+
+// const fruitName = [];
+
+// for (const watermelon of watermelons) {
+//   fruitName.push(watermelon.price);
+// }
+
+// console.log(fruitName);
+
+//
+
+// const clients = [
+//   'Lemon',
+//   'Kiwi',
+//   'Watermelon',
+//   'Apple',
+//   'Lemon',
+//   'Apple',
+//   'Kiwi',
+//   'Watermelon',
+//   'Apple',
+//   'Lemon',
+//   'Kiwi',
+//   'Apple',
+//   'Lemon',
+//   'Apple',
+//   'Apple',
+//   'Watermelon',
+// ];
+
+// const stats = {};
+
+// for (const client of clients) {
+// if (stats[client]) {
+//   stats[client] += 1;
+// } else {
+//   stats[client] = 1;
+// }
+
+// ||
+
+//   stats[client] ? (stats[client] += 1) : (stats[client] = 1);
+// }
+
+// console.log(stats);
+
+//
+
+// const username = prompt('Write your name');
+// const userEmail = prompt('Write your email');
+
+// const userLogin = {
+//   username,
+//   userEmail,
+// };
+
+// console.log(userLogin);
+
+//
+
+// const products = [
+//   { name: 'Radar', price: 1300, quantity: 4 },
+//   { name: 'Scanner', price: 2700, quantity: 3 },
+//   { name: 'Droid', price: 400, quantity: 7 },
+//   { name: 'Grip', price: 1200, quantity: 9 },
+// ];
+
+// function getAllPropValues(propName) {
+//   const productValues = [];
+
+//   for (const product of products) {
+//     if (product[propName]) {
+//       productValues.push(product[propName]);
+//     }
+//   }
+
+//   return productValues;
+// }
+// console.log('product name:', getAllPropValues('name'));
+// console.log('product price:', getAllPropValues('price'));
+// console.log('product quantity:', getAllPropValues('quantity'));
+
+//
+
+// const mass = [
+//   2, 57, 8764, 45, 756, 2345, 86, 9, 76, 3463, 7, 9, 670, 4, 67, -569, 92, 30,
+//   8, -4, 54, 546, 4, 60,
+// ];
+
+// console.log(...mass);
+// console.log(Math.max(...mass));
+// console.log(Math.min(...mass));
+
+// let total = 0;
+
+// for (const value of mass) {
+//   total += value;
+// }
+// console.log('total:', total);
+
+// spread: создание нового массива
+
+// const mass1 = [1, 2, 3, 4, 5];
+// const mass2 = [6, 7, 8, 9, 0];
+// const massAll = [...mass1, ...mass2];
+// console.log(massAll);
+
+//
+
+// const fruitsShop = {
+//   quantity: 99,
+//   price: 5699,
+// };
+
+// const { quantity, price, link = 'htpps:123123123.html' } = fruitsShop;
+
+// console.log(link);
+
+// Деструктуризация в циклах
+
+// const watermelons = [
+//   {
+//     theWeight: '2kg',
+//     quantity: 1,
+//     price: '2$',
+//     areAvailable: true,
+//   },
+//   {
+//     theWeight: '3kg',
+//     quantity: 2,
+//     price: '5$',
+//     areAvailable: false,
+//   },
+//   {
+//     theWeight: '4kg',
+//     quantity: 3,
+//     price: '7$',
+//     areAvailable: true,
+//   },
+// ];
+
+// for (const watermelon of watermelons) {
+//   console.log(watermelon.theWeight);
+//   console.log(watermelon.quantity);
+//   console.log(watermelon.price);
+//   console.log(watermelon.areAvailable);
+// }
+
+// ||
+
+// for (const { theWeight, quantity, price, areAvailable } of watermelons) {
+//   console.log(theWeight);
+//   console.log(price);
+//   console.log(quantity);
+//   console.log(areAvailable);
+// }
+
+//
+
+// const client = {
+//   name: 'Ivan',
+//   surname: 'Dovhopol',
+//   location: {
+//     country: 'Ukraine',
+//     city: 'Kyiv',
+//   },
+//   info: {
+//     age: 20,
+//     growth: 183.5,
+//     hobbies: ['swiming', 'music', 'sci-fi'],
+//   },
+// };
+
+// console.log(client);
+
+// const {
+//   name,
+//   surname,
+//   location: { country: clientCountry, city: clientCity },
+//   info: { age: clientAge, growth: clientGrowth, hobbies: clientHobbies },
+// } = client;
+
+// console.log(name);
+// console.log(surname);
+// console.log(clientCountry);
+// console.log(clientAge);
+// console.log(clientHobbies);
+
+//
+
+// const rgb = [155, 90, 252];
+// const [red, green, blue] = rgb;
+// console.log(rgb);
+
+// console.log(`R:${red}, G:${green}, B:${blue}`);
+
+//
+
+//
+
+// Pефакторинг методов объекта =>
+
+// const atTheOldToad = {
+//   potions: [
+//     { name: 'Speed potion', price: 460 },
+//     { name: 'Dragon breath', price: 780 },
+//     { name: 'Stone skin', price: 520 },
+//   ],
+
+//   getPotions() {
+//     return this.potions;
+//   },
+
+//   addPotion(newPotion) {
+//     for (const potion of this.potions) {
+//       const { name } = potion;
+//       if (name === newPotion.name) {
+//         return `Error! Potion ${newPotion.name} is already in your inventory!`;
+//       }
+//     }
+//     this.potions.push(newPotion);
+//   },
+
+//   removePotion(potionName) {
+//     const { potions } = this;
+
+//     for (let i = 0; i < potions.length; i += 1) {
+//       const { name } = this.potions[i];
+//       if (name === potionName) {
+//         return potions.splice(i, 1);
+//       }
+//     }
+//     return `Potion ${potionName} is not in inventory!`;
+//   },
+
+//   updatePotionName(oldName, newName) {
+//     const { potions } = this;
+//     for (let potion of potions) {
+//       if (potion.name === oldName) {
+//         potion.name = newName;
+//       }
+//     }
+//     return `Potion ${oldName} is not in inventory!`;
+//   },
+// };
+
+// console.log(atTheOldToad);
