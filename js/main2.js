@@ -153,17 +153,3 @@
 // foo(100, 4, (x, y) => x / y);
 
 //
-
-const onGetPositionSuccess = position => {
-  console.log('Ваша позиция');
-  console.log('success:', position);
-};
-
-const onGetPositionError = error => {
-  console.log('error:', error);
-};
-
-window.navigator.geolocation.getCurrentPosition(
-  onGetPositionSuccess,
-  onGetPositionError,
-);
