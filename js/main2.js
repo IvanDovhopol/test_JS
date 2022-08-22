@@ -548,3 +548,132 @@
 // console.log('sum:', _.sum([6434, 3223]));
 
 //
+
+// const numbers = [346357, 346748];
+// let total = 0;
+
+// for (let i = 0; i < numbers.length; i += 1) {
+//   total += numbers[i];
+// }
+// console.log('var 1:', total);
+
+// // ||
+
+// console.log('var 2:', _.sum(numbers));
+
+//
+
+//  =====================NX================== <|> Контекст выполнения функции <|>
+
+// const user = {
+//   username: 'Ivan',
+//   shownName() {
+//     console.log(this.username);
+//   },
+// };
+
+// user.shownName();
+
+//
+
+// const playlist = {
+//   tracks: ['qwe', 'asd', 'zxc'],
+//   getTracks() {
+//     return this.tracks;
+//   },
+//   addTracks(trackName) {
+//     this.tracks.push(trackName);
+//   },
+// };
+
+// console.log('old tracks:', playlist.getTracks());
+// playlist.addTracks('dsfhjsrtij');
+// console.log('new tracks:', playlist.getTracks());
+
+//  =====================NX================== <|> 'this' в глобальной области видимости <|>
+
+// const foo = () => console.log(this);
+// foo();
+
+//  =====================NX================== <|> this в методе объекта <|>
+
+// const user = {
+//   userName: 'Ivan',
+//   getUser() {
+//     console.log('this:', this);
+//   },
+//   userShow() {
+//     const userName = () => console.log('this.userName:', this.userName);
+//     userName();
+//   },
+// };
+
+// user.getUser();
+// user.userShow();
+
+//
+
+// function showThis() {
+//   console.log('this in showThis: ', this);
+// }
+
+// showThis();
+
+// const user = {
+//   name: 'Ivan',
+// };
+
+// user.showContext = showThis;
+// user.showContext();
+
+//  =====================NX================== <|> Методы функций -- call() <|>
+
+// function greetUser(greeting) {
+//   console.log(`${greeting}, ${this.username}!`);
+// }
+
+// const lemon = {
+//   username: 'Lemon',
+// };
+
+// const watermelon = {
+//   username: 'Watermelon',
+// };
+
+// greetUser.call(lemon, 'Welcome');
+// greetUser.call(watermelon, 'Goodbye');
+
+//  =====================NX================== <|> Методы функций -- apply() <|>
+
+// function greetUser(greeting) {
+//   console.log(`${greeting}, ${this.username}!`);
+// }
+
+// const lemon = {
+//   username: 'Lemon',
+// };
+
+// const watermelon = {
+//   username: 'Watermelon',
+// };
+
+// greetUser.apply(lemon, ['Welcome']);
+// greetUser.apply(watermelon, ['Goodbye']);
+
+//  =====================NX================== <|> Метод функции -- bind() <|>
+
+// const customer = {
+//   firstName: 'Jacob',
+//   lastName: 'Mercer',
+//   getFullName() {
+//     return `${this.firstName} ${this.lastName}`;
+//   },
+// };
+
+// function makeMessage(callback) {
+//   // callback() это вызов метода getFullName без объекта
+//   console.log(`Обрабатываем заявку от ${callback()}...`);
+// }
+
+// // makeMessage(customer.getFullName); // Будет ошибка при вызове функции
+// makeMessage(customer.getFullName.bind(customer));

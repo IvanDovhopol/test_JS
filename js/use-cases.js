@@ -38,3 +38,41 @@
 // setTimeout(callbek, 2350);
 
 // console.log('Next ...');
+
+//  =====================NX================== <|> получаем доступ к html <|>
+
+// const counter = {
+//   value: 0,
+//   increment() {
+//     this.value += 1;
+//   },
+//   decrement() {
+//     this.value -= 1;
+//   },
+// };
+
+// const incrementBtn = document.querySelector('.js-increment');
+// const decrementBtn = document.querySelector('.js-decrement');
+// const valueEl = document.querySelector('.value');
+
+// incrementBtn.addEventListener('click', () => {
+//   if (counter.value <= -1) {
+//     console.log('error');
+//   } else {
+//     console.log('Up');
+//   }
+
+//   counter.increment();
+//   valueEl.textContent = counter.value;
+// });
+
+// decrementBtn.addEventListener('click', () => {
+//   if (counter.value <= 0) {
+//     console.log('error');
+//   } else {
+//     console.log('down');
+//   }
+
+//   counter.decrement();
+//   valueEl.textContent = counter.value;
+// });
