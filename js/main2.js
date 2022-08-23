@@ -1,4 +1,4 @@
-// Module 5 =>
+// Module 4 =>
 
 //                                          - Колбэк-функции
 // function user(name) {
@@ -563,6 +563,8 @@
 
 //
 
+//  =====================NX================== <|> Module - 5 <|>
+
 //  =====================NX================== <|> Контекст выполнения функции <|>
 
 // const user = {
@@ -677,3 +679,312 @@
 
 // // makeMessage(customer.getFullName); // Будет ошибка при вызове функции
 // makeMessage(customer.getFullName.bind(customer));
+
+//
+
+// const user = {
+//   name: 'Lemon',
+//   age: '25',
+//   city: 'Kiev',
+//   makeUser() {
+//     return {
+//       name: 'Mango',
+//       ages: this,
+//     };
+//   },
+// };
+
+// console.log(user.ages);
+
+// const mango = user.makeUser();
+// console.log(mango);
+
+//
+
+// const baseSalary = 30000;
+// const overtime = 10;
+// const rate = 20;
+
+// const getWage = (baseSalary, overtime, rate) => (baseSalary + overtime) / rate;
+
+// console.log(getWage(baseSalary, overtime, rate));
+
+//
+
+// const employee = {
+//   baseSalary: 30000,
+//   overtime: 10,
+//   rate: 20,
+//   getWage() {
+//     return this.baseSalary + this.overtime * this.rate;
+//   },
+// };
+
+// console.log('total salary:', employee.getWage(), '$');
+
+//
+
+//  =====================NX================== <|> Классы и их свойства <|>
+
+//
+
+//  =====================NX================== <|> Конструктор класса <|>
+
+// class User {
+//   constructor(name, email) {
+//     this.name = name;
+//     this.email = email;
+//   }
+// }
+
+// const kiwi = new User('Kiwi', 'kiwi@qwe');
+// console.log('kiwi :>> ', kiwi);
+
+// const watermelon = new User('Watermelon', 'watermelon@qwe');
+// console.log('watermelon :>> ', watermelon);
+
+//  =====================NX================== <|> Объект параметров <|>
+
+// class User {
+//   // Деструктуризируем объект
+//   constructor({ name, email }) {
+//     this.name = name;
+//     this.email = email;
+//   }
+// }
+
+// const mango = new User({
+//   name: 'Манго',
+//   email: 'mango@mail.com',
+// });
+// console.log(mango);
+
+// const poly = new User({
+//   name: 'Поли',
+//   email: 'poly@mail.com',
+// });
+// console.log(poly);
+
+//  =====================NX================== <|> Методы класса и Приватные свойства <|>
+
+// class User {
+//   #email;
+
+//   constructor({ name, email }) {
+//     this.name = name;
+//     this.email = email;
+//   }
+
+//   // Метод getEmail
+//   getEmail() {
+//     return this.email;
+//   }
+
+//   // Метод changeEmail
+//   changeEmail(newEmail) {
+//     this.email = newEmail;
+//   }
+// }
+
+// const lemon = new User({
+//   neme: 'Lemon',
+//   email: 'mango@qwe',
+// });
+
+// lemon.changeEmail('lemon@qwe');
+// console.log(lemon.getEmail());
+// console.log(lemon.#email); // Будет ошибка, это приватное свойство
+
+//  =====================NX================== <|> Геттеры и сеттеры <|>
+
+// class User {
+//   #email;
+
+//   constructor(name, email) {
+//     this.name = name;
+//     this.#email - email;
+//   }
+
+//   get email() {
+//     return this.#email;
+//   }
+
+//   set email(newEmail) {
+//     if (newEmail === 'qwe') {
+//       console.log('Error');
+//       return;
+//     }
+//     this.#email = newEmail;
+//   }
+// }
+
+// const lemon = { name: 'Lemon', email: 'lemon@qwe' };
+// lemon.email = 'superlemon@qwe';
+
+// console.log('lemon.email :>> ', lemon.email);
+
+//  =====================NX================== <|> Статические свойства <|>
+
+// class User {
+//   static Roles = {
+//     ADMIN: 'admin',
+//     EDITOR: 'editor',
+//   };
+
+//   #email;
+//   #role;
+
+//   constructor({ email, role }) {
+//     this.#email = email;
+//     this.#role = role;
+//   }
+
+//   get role() {
+//     return this.#role;
+//   }
+
+//   set role(newRole) {
+//     this.#role = newRole;
+//   }
+// }
+
+// const lemon = {
+//   email: 'lemon@qwe',
+//   role: User.Roles.ADMIN,
+// };
+
+// console.log('lemon.role pre:>> ', lemon.role);
+// lemon.role = User.Roles.EDITOR;
+// console.log('lemon.role next:>> ', lemon.role);
+
+//  =====================NX================== <|> Статические методы <|>
+
+// class User {
+//   static #takenEmails = [];
+
+//   static isEmailTaken(email) {
+//     return User.#takenEmails.includes(email);
+//   }
+
+//   #email;
+
+//   constructor({ email }) {
+//     this.#email = email;
+//     User.#takenEmails.push(email);
+//   }
+// }
+
+// const mango = new User({ email: 'mango@mail.com' });
+
+// console.log(User.isEmailTaken('poly@mail.com'));
+// console.log(User.isEmailTaken('mango@mail.com'));
+
+//  =====================NX================== <|> Наследование классов <|>
+
+// class User {
+//   #email;
+
+//   constructor(email) {
+//     this.#email = email;
+//   }
+
+//   get email() {
+//     return this.#email;
+//   }
+
+//   set email(newEmail) {
+//     this.#email = newEmail;
+//   }
+// }
+
+// class NewUser extends User {
+//   //
+// }
+
+// const newUser = new NewUser('lemon@qwe');
+// console.log('newUser :>> ', newUser);
+// console.log('newUser.email :>> ', newUser.email);
+
+//  =====================NX================== <|> Конструктор дочернего класса <|>
+
+// class User {
+//   #email;
+
+//   constructor(email) {
+//     this.#email = email;
+//   }
+
+//   get email() {
+//     return this.#email;
+//   }
+
+//   set email(newEmail) {
+//     this.#email = newEmail;
+//   }
+// }
+
+// class ContentEditor extends User {
+//   constructor({ email, posts }) {
+//     super(email);
+//     this.posts = posts;
+//   }
+// }
+
+// const editor = new ContentEditor({ email: 'lemon@qwe', posts: [] });
+// console.log('editor :>> ', editor);
+// console.log('editor.email :>> ', editor.email);
+
+//  =====================NX================== <|> Методы дочернего класса <|>
+
+// class User {
+//   #email;
+
+//   constructor(email) {
+//     this.#email = email;
+//   }
+
+//   get email() {
+//     return this.#email;
+//   }
+
+//   set email(newEmail) {
+//     this.#email = newEmail;
+//   }
+// }
+
+// class ContentEditor extends User {
+//   constructor({ email, posts }) {
+//     super(email);
+//     this.posts = posts;
+//   }
+
+//   addPost(post) {
+//     this.posts.push(post);
+//   }
+// }
+
+// const editor = new ContentEditor({ email: 'mango@mail.com', posts: [] });
+// console.log(editor);
+// console.log(editor.email);
+
+// editor.addPost('post-1');
+// console.log(editor.posts);
+
+//
+
+//
+
+//  =====================NX================== <|> Закрепление материала <|>
+
+// const objC = {
+//   z: 5,
+// };
+// console.log('objC :>> ', objC);
+
+// const objB = Object.create(objC);
+// objB.y = 2;
+// console.log('objB :>> ', objB);
+
+// const objA = Object.create(objB);
+// objA.x = 1;
+// console.log('objA :>> ', objA);
