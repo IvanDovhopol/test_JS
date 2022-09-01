@@ -988,3 +988,160 @@
 // const objA = Object.create(objB);
 // objA.x = 1;
 // console.log('objA :>> ', objA);
+
+//
+
+//  =====================NX================== <|> ОСНОВНОЙ ПРИНЦИП ПРОТОТИПНОГО НАСЛЕДОВАНИЯ <|>
+
+//
+
+// const User = function ({ email, tel, pwd }) {
+//   this.email = email;
+//   this.tel = tel;
+//   this.pwd = pwd;
+// };
+
+// const mango = new User({
+//   email: 'mango@qwe',
+//   tel: '+380 123123123',
+//   pwd: '123345656',
+// });
+
+// User.prototype.changeEmail = function (newEmail) {
+//   this.email = newEmail;
+// };
+
+// User.prototype.changeTel = function (newTel) {
+//   this.tel = newTel;
+// };
+
+// User.prototype.changePwd = function (newPwd) {
+//   this.pwd = newPwd;
+// };
+
+// mango.changeEmail('superMango@qwe');
+// console.log('изменяем ел-почту mango :>> ', mango);
+
+// mango.changeTel('+380 95000000');
+// console.log('изменяем номер телефона mango :>> ', mango);
+
+// mango.changePwd('102938475');
+// console.log('изменяем пароль mango :>> ', mango);
+
+//
+
+//  =====================NX================== <|> Создаём машину через class <|>
+
+//
+
+// class Car {
+//   constructor({ name, model, price }) {
+//     this._name = name;
+//     this._model = model;
+//     this._price = price;
+//   }
+
+//   get name() {
+//     return this._name;
+//   }
+//   set name(newName) {
+//     this._name = newName;
+//   }
+
+//   get model() {
+//     return this._model;
+//   }
+//   set model(newModel) {
+//     this._model = newModel;
+//   }
+
+//   get price() {
+//     return this._price;
+//   }
+//   set price(newPrice) {
+//     this._price = newPrice;
+//   }
+// }
+
+// const carInstance = new Car({
+//   name: 'BMW',
+//   model: 'm5',
+//   price: 30000,
+// });
+
+// console.log('carInstance :>> ', carInstance);
+// console.log('OLD -> carInstance.name :>> ', carInstance.name);
+// console.log('OLD -> carInstance.model :>> ', carInstance.model);
+// console.log('OLD -> carInstance.price :>> ', carInstance.price);
+// console.log('');
+
+// carInstance.name = 'Audi';
+// carInstance.model = 'Q3';
+// carInstance.price = 55000;
+
+// console.log('carInstance :>> ', carInstance);
+// console.log('NEW -> carInstance.name :>> ', carInstance.name);
+// console.log('NEW -> carInstance.model :>> ', carInstance.model);
+// console.log('NEW -> carInstance.price :>> ', carInstance.price);
+
+//
+
+//  =====================NX================== <|> Создаём героев для игры используя class <|>
+
+// class Hero {
+//   constructor({ name = 'hero', xp = 0 } = {}) {
+//     this.name = name;
+//     this.xp = xp;
+//   }
+
+//   gainXp(amount) {
+//     this.xp += amount;
+//     console.log(`${this.name} получает за победу ${amount}xp`);
+//   }
+// }
+
+// class Warrior extends Hero {
+//   constructor({ weapon, ...rest } = {}) {
+//     super(rest);
+//     this.weapon = weapon;
+//   }
+
+//   attack() {
+//     console.log(
+//       `${this.name} атакует используя ${this.weapon} и убивает trsie`,
+//     );
+//   }
+// }
+
+// const mango = new Warrior({ name: 'Mango', xp: 2500, weapon: 'sword' });
+
+// console.log('mango :>> ', mango);
+// mango.attack();
+// mango.gainXp(1300);
+// mango.weapon = 'knife';
+// console.log('mango :>> ', mango);
+// console.log('');
+
+// class Mage extends Warrior {
+//   constructor({ spells, ...rest } = {}) {
+//     super(rest);
+//     this.spells = spells;
+//   }
+
+//   cast() {
+//     console.log(`${this.name} бросается ${this.spells} и убивает roomd`);
+//   }
+// }
+
+// const kiwi = new Mage({
+//   name: 'Kiwi',
+//   xp: 570,
+//   weapon: '',
+//   spells: 'fire',
+// });
+
+// console.log('kiwi :>> ', kiwi);
+// kiwi.cast();
+// kiwi.gainXp(1900);
+// kiwi.xp = 750;
+// console.log('kiwi :>> ', kiwi);
