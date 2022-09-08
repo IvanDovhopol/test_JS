@@ -34,3 +34,7 @@ Console:
 [cw] => console.warn console.warn(${1});
 
 [de] => debugger debugger;
+
+//
+
+[qs] => document.querySelector('qwe');

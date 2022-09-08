@@ -27,7 +27,6 @@
 // const clients = ['Apple', 'Lemon', 'Kiwi', 'Poly', 'Mango'];
 
 // const list = document.querySelector('ul');
-// const items = document.querySelector('li');
 // const markup = clients.map(client => `<li>${client}</li>`).join('');
 
 // list.innerHTML = markup;

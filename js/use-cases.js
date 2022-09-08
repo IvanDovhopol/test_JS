@@ -56,7 +56,7 @@
 // const valueEl = document.querySelector('.value');
 
 // incrementBtn.addEventListener('click', () => {
-//   if (counter.value <= -1) {
+//   if (counter.value >= 0) {
 //     console.log('error');
 //   } else {
 //     console.log('Up');
@@ -67,7 +67,7 @@
 // });
 
 // decrementBtn.addEventListener('click', () => {
-//   if (counter.value <= 0) {
+//   if (counter.value < 0) {
 //     console.log('error');
 //   } else {
 //     console.log('down');

@@ -206,3 +206,139 @@
 // const markup = clients.map(client => `<li>${client}</li>`).join('');
 // list.insertAdjacentHTML('afterbegin', markup);
 // list.insertAdjacentHTML('beforebegin', '<h1>Hello World</h1>');
+
+//  =====================NX================== <|> События <|>
+
+// const singleBtn = document.querySelector('#single');
+
+// const handleClick = () => {
+//   console.log('click event listener callback');
+// };
+
+// singleBtn.addEventListener('click', handleClick);
+
+// // ===============================================
+// const multiBtn = document.querySelector('#multiple');
+
+// const firstCallback = () => {
+//   console.log('First callback!');
+// };
+// const secondCallback = () => {
+//   console.log('Second callback!');
+// };
+// const thirdCallback = () => {
+//   console.log('Third callback!');
+// };
+
+// multiBtn.addEventListener('click', firstCallback);
+// multiBtn.addEventListener('click', secondCallback);
+// multiBtn.addEventListener('click', thirdCallback);
+
+//
+
+//  =====================NX================== <|> Метод removeEventListener() <|>
+
+// const addListenerBtn = document.querySelector('[data-action="add"]');
+// const removeListenerBtn = document.querySelector('[data-action="remove"]');
+// const btn = document.querySelector('#btn');
+
+// const handleClick = () => {
+//   console.log('click event listener callback');
+// };
+
+// addListenerBtn.addEventListener('click', () => {
+//   btn.addEventListener('click', handleClick);
+//   console.log('click event listener was added to btn');
+// });
+
+// removeListenerBtn.addEventListener('click', () => {
+//   btn.removeEventListener('click', handleClick);
+//   console.log('click event listener was removed from btn');
+// });
+
+//  =====================NX================== <|> Ключевое слово this <|>
+
+// const mango = {
+//   username: 'Mango',
+//   showUsername() {
+//     console.log(this);
+//     console.log(`My username is: ${this.username}`);
+//   },
+// };
+
+// const btn = document.querySelector('.js-btn');
+// console.log(btn);
+
+// mango.showUsername();
+// btn.addEventListener('click', mango.showUsername.bind(mango));
+
+//  =====================NX================== <|> Действия браузера по умолчанию <|>
+
+// const form = document.querySelector('.register-form');
+
+// form.addEventListener('submit', event => {
+//   event.preventDefault();
+//   const {
+//     elements: { username, password },
+//   } = event.currentTarget;
+//   console.log('name:', username.value + ';', 'pwd:', password.value + ';');
+// });
+
+//  =====================NX================== <|> Свойства key и code <|>
+
+// const clearLogBtn = document.querySelector('[data-action="clear"]');
+// const logList = document.querySelector('.log-list');
+// let keypressCounter = 1;
+
+// document.addEventListener('keydown', logMessage);
+// document.addEventListener('keyup', logMessage);
+// clearLogBtn.addEventListener('click', reset);
+
+// function logMessage({ type, key, code }) {
+//   const markup = `<div class="log-item">
+//     <span class="chip">${keypressCounter}</span>
+//     <ul>
+//       <li><b>Event</b>: ${type}</li>
+//       <li><b>Key</b>: ${key}</li>
+//       <li><b>Code</b>: ${code}</li>
+//     </ul>
+//   </div>`;
+
+//   logList.insertAdjacentHTML('afterbegin', markup);
+
+//   if (type === 'keyup') {
+//     incrementKeypressCounter();
+//   }
+// }
+
+// function reset() {
+//   keypressCounter = 1;
+//   logList.innerHTML = '';
+// }
+
+// function incrementKeypressCounter() {
+//   keypressCounter += 1;
+// }
+
+//
+
+// const btnRef = document.querySelector('.js-btn');
+// console.log(btnRef);
+
+// btnRef.addEventListener('click', () => console.clear());
+
+// document.addEventListener('keyup', ({ key }) => {
+//   console.log(key);
+// });
+
+//  =====================NX================== <|> Событие input <|>
+
+// const inputRef = document.querySelector('.js-input');
+// const outputRef = document.querySelector('.js-output');
+
+// console.log(inputRef);
+// console.log(outputRef);
+
+// inputRef.addEventListener('input', event => {
+//   outputRef.textContent = event.currentTarget.value;
+// });
