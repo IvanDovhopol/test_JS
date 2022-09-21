@@ -1,0 +1,24 @@
+{
+  "name": "test_js",
+  "version": "1.0.0",
+  "description": "Trigger Content:",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node interactive.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IvanDovhopol/test_JS.git"
+  },
+  "author": "Ivan Dovhopol <ivandovhopol@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IvanDovhopol/test_JS/issues"
+  },
+  "homepage": "https://github.com/IvanDovhopol/test_JS#readme",
+  "keywords": [],
+  "dependencies": {
+    "validator": "^13.7.0"
+  }
+}
